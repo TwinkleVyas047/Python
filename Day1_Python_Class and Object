@@ -1,0 +1,111 @@
+Topic : Python Class and Object
+#Example 1 Multiple objects
+"""class Parrot:
+    #class attribute
+    name=""
+    age=0
+
+#create parrot1 object
+parrot1=Parrot()
+parrot1.name="Ostrich"
+parrot1.age=10
+
+#create parrot2 object
+parrot2=Parrot()
+parrot2.name="Eagle"
+parrot2.age=5
+
+#acces attributes
+print(f"{parrot1.name} is {parrot1.age} years old")
+print(f"{parrot2.name} is {parrot2.age} years old")
+"""
+#Example 2 Python Methods
+"""
+class Room:
+    length=0.0
+    breadth=0.0
+
+    #method to calculate area
+    def calculate_area(self):
+        print("Area of Room=", self.length*self.breadth)
+    
+#create object of Room class
+
+room1=Room()
+
+room1.length=12.9
+room1.breadth=10.5
+
+room1.calculate_area()
+"""
+
+#Python Inheritance
+"""
+#base class
+class Animal:
+    def eat(self):
+        print("I can eat..")
+    
+    def sleep(self):
+        print("I can sleep..")
+
+#derived class
+class Dog(Animal):
+    def bark(self):
+        print("barking..")
+
+dog1=Dog()
+dog1.eat()
+dog1.sleep()
+dog1.bark()
+"""
+
+#Python Encapsulation
+"""
+class Computer:
+    def __init__(self):
+        self.__maxprice=900
+
+    def sell(self):
+        print("Selling price: {}".format(self.__maxprice))
+
+    def setMaxPrice(self,price):
+        self.__maxprice=price
+    
+c=Computer()
+c.sell()
+
+#change the price
+c.__maxprice=1000
+c.sell()
+
+#using setter function
+c.setMaxPrice(1000)
+c.sell()
+"""
+
+#Python Polymorphism
+"""
+class Polygon:
+    # method to render a shape
+    def render(self):
+        print("Rendering Polygon...")
+
+class Square(Polygon):
+    # renders Square
+    def render(self):
+        print("Rendering Square...")
+
+class Circle(Polygon):
+    # renders circle
+    def render(self):
+        print("Rendering Circle...")
+    
+# create an object of Square
+s1 = Square()
+s1.render()
+
+# create an object of Circle
+c1 = Circle()
+c1.render()
+"""
